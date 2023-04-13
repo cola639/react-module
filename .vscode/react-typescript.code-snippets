@@ -1,0 +1,74 @@
+{
+  // Place your local workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+
+  "React function template": {
+    "prefix": "rfc",
+    "body": [
+      "import { FC,useState, useEffect, useCallback, useMemo } from 'react'",
+      "",
+      "export interface I${TM_FILENAME_BASE}Props{}",
+      "",
+      "const ${TM_FILENAME_BASE}: FC<I${TM_FILENAME_BASE}Props> = ({}) => {",
+      "",
+      "useEffect(() => {}, [])",
+      "useCallback(() => {}, []) ",
+      "useMemo(() => {}, [])",
+      "",
+      " return <div>${TM_FILENAME_BASE}</div>",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE}"
+    ],
+    "description": "Log output to react component template"
+  },
+  "React async function template": {
+    "prefix": "tcf",
+    "body": [
+      "asyncFun().then((res) => {console.log(res)})",
+      ".catch((err) => {console.log(err)})",
+      ".finally(()=>{})"
+    ],
+    "description": "Async chain operation "
+  },
+  "React useState template": {
+    "prefix": "useState",
+    "body": [" const [value, setValue] = useState('')"],
+    "description": "Log output to react useState template"
+  },
+  "React useEffect template": {
+    "prefix": "useEffect",
+    "body": [
+      "useCallback(() => { asyncFun().then((res) => {console.log(res)}).catch((err) => {console.log(err)}).finally(()=>{})  }, [detectiveArray]) "
+    ],
+    "description": "Log output to react useEffect template"
+  },
+  "React useMemo template": {
+    "prefix": "useMemo",
+    "body": [
+      "const needRender = useMemo(() => { excuteLogic }, [detectiveArray])"
+    ],
+    "description": "Log output to react useMemo template"
+  },
+  "React useCallback template": {
+    "prefix": "useMemo",
+    "body": [
+      "const handleFunction = useCallback(() => { excuteLogic }, [detectiveArray])"
+    ],
+    "description": "Log output to react useCallback template"
+  },
+  "React handleEvent template": {
+    "prefix": "handleEvent",
+    "body": ["const handleFunction = () => {}"],
+    "description": "Log output to react useCallback template"
+  },
+  "Print to global": {
+    "prefix": "scss :global()",
+    "body": [".ParentclassName {:global(.subClassName)}"],
+    "description": "Log output to global css template"
+  }
+}
