@@ -31,7 +31,6 @@ const App: FC<IAppProps> = () => {
   const [view, setView] = useState('sidebar')
 
   const changeView = (id: string) => {
-    console.log('id', id)
     setView(id)
   }
 
