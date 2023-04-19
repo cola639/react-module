@@ -3,6 +3,7 @@ import { useThemeWatcher } from './hooks/useThemeWatcher'
 
 // Component
 import AppSidebar from '@/pages/sidebar'
+import DocS from '@/pages/search/docSearch'
 
 import 'normalize.css'
 import './styles/index.scss'
@@ -40,11 +41,13 @@ const App: FC<IAppProps> = () => {
         <ButtonGroup variant="contained" color="primary">
           <Button onClick={() => changeView('sidebar')}>sidebar</Button>
           <Button onClick={() => changeView('other')}>other</Button>
+          <Button onClick={() => changeView('docSearch')}>docSearch</Button>
         </ButtonGroup>
       </Box>
       <Box className={classes.wrap}>
         {view === 'sidebar' && <AppSidebar />}
         {view === 'search' && <></>}
+        {view === 'docSearch' && <DocS></DocS>}
       </Box>
     </>
   )
