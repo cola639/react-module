@@ -1,5 +1,4 @@
 import { DocSearch } from '@docsearch/react'
-
 import '@docsearch/css'
 
 export default function DocS() {
